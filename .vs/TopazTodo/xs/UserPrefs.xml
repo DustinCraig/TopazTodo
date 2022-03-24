@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{7893554B-F181-43A0-9107-89544CB9A7C4}|Default">
+  <DisabledProjects>
+    <String>TopazTodo.WebUI/TopazTodo.Application/TopazTodo.Application.csproj</String>
+    <String>TopazTodo.WebUI/TopazTodo.Domain/TopazTodo.Domain.csproj</String>
+    <String>TopazTodo.WebUI/TopazTodo.Infrastructure/TopazTodo.Infrastructure.csproj</String>
+  </DisabledProjects>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/dustincraig/Projects/TopazTodo/TopazTodo.Infrastructure/AppDbContext.cs" relfile="TopazTodo.Infrastructure/AppDbContext.cs" line="23" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.src.TopazTodo.WebUI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TopazTodo.WebUI/Program.cs">
+    <Files>
+      <File FileName="TopazTodo.WebUI/Controllers/UserController.cs" Line="18" Column="2" />
+      <File FileName="TopazTodo.WebUI/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" Line="5" Column="1" />
+      <File FileName="TopazTodo.WebUI/TopazTodo.WebUI.csproj" Line="22" Column="72" />
+      <File FileName="TopazTodo.WebUI/Program.cs" Line="19" Column="1" />
+      <File FileName="TopazTodo.WebUI/Startup.cs" Line="35" Column="1" />
+      <File FileName="TopazTodo.Infrastructure/DependencyInjection.cs" Line="16" Column="2" />
+      <File FileName="TopazTodo.Infrastructure/AppDbContext.cs" Line="4" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TopazTodo" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="TopazTodo.Application" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="TopazTodo.Infrastructure" expanded="True" />
+              <Node name="TopazTodo.WebUI" expanded="True">
+                <Node name="Controllers" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

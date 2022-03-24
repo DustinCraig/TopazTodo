@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TopazTodo.Domain/1.0.0": {
+        "runtime": {
+          "TopazTodo.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TopazTodo.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
