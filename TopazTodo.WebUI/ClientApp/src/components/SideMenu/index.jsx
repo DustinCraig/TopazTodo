@@ -2,6 +2,7 @@ import React from 'react'
 import Drawer from '@mui/material/Drawer'
 import TodoList from './components/TodoList'
 import Header from './components/Header'
+import NewList from './components/NewList'
 import { useLayout } from '../../context/LayoutContext'
 
 export default () => {
@@ -20,6 +21,7 @@ export default () => {
       <div>
         <Header />
         <TodoList />
+        <NewList />
       </div>
     </Drawer>
   )

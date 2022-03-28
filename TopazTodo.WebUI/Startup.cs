@@ -17,6 +17,12 @@ public class Startup
     {
         services.AddControllersWithViews();
         services.AddInfrastructure(Configuration);
+        services.AddAuthentication()
+            .AddGoogle(options =>
+            {
+                options.ClientId = Configuration["AppSettings:GoogleClientId"];
+                options.ClientSecret = Configuration["AppSettings:GoogleClientSecret"];
+            });
 
     }
 
