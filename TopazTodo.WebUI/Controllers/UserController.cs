@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Mvc;
 
 namespace TopazTodo.WebUI.Controllers;
 
@@ -14,6 +16,19 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
+    [HttpPost("login")]
+    public ChallengeResult Login()
+    {
+        return new ChallengeResult
+            (GoogleDefaults.AuthenticationScheme,
+                new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse", "GoogleLogin")}
+            );
+    }
 
+    [HttpGet("test")]
+    public IActionResult Test()
+    {
+        return new OkObjectResult(new { Message = "fd" });
+    }
 }
 

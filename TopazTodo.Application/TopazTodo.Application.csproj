@@ -12,6 +12,7 @@
   <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" />
       <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,11 +20,14 @@
     <None Remove="Interfaces\Repositories\" />
     <None Remove="Features\" />
     <None Remove="Services\" />
+    <None Remove="DTOs\" />
+    <None Remove="Microsoft.AspNetCore.Authentication.Google" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TopazTodo.Domain\TopazTodo.Domain.csproj" />

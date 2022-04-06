@@ -1,42 +1,34 @@
 ﻿<Properties StartupConfiguration="{7893554B-F181-43A0-9107-89544CB9A7C4}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <DisabledProjects>
     <String>TopazTodo.WebUI/TopazTodo.Application/TopazTodo.Application.csproj</String>
     <String>TopazTodo.WebUI/TopazTodo.Domain/TopazTodo.Domain.csproj</String>
     <String>TopazTodo.WebUI/TopazTodo.Infrastructure/TopazTodo.Infrastructure.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.ItemProperties.src.TopazTodo.WebUI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TopazTodo.Domain/Entities/TodoItem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TopazTodo.WebUI/Controllers/UserController.cs">
     <Files>
-      <File FileName="TopazTodo.WebUI/Controllers/UserController.cs" Line="16" Column="1" />
-      <File FileName="TopazTodo.WebUI/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" Line="5" Column="1" />
-      <File FileName="TopazTodo.WebUI/TopazTodo.WebUI.csproj" Line="24" Column="28" />
-      <File FileName="TopazTodo.WebUI/Program.cs" Line="26" Column="14" />
-      <File FileName="TopazTodo.WebUI/Startup.cs" Line="30" Column="10" />
-      <File FileName="TopazTodo.Infrastructure/DependencyInjection.cs" Line="14" Column="79" />
-      <File FileName="TopazTodo.Infrastructure/AppDbContext.cs" Line="26" Column="1" />
-      <File FileName="TopazTodo.Infrastructure/TopazTodo.Infrastructure.csproj" Line="24" Column="1" />
-      <File FileName="TopazTodo.WebUI/appsettings.json" Line="11" Column="170" />
-      <File FileName="TopazTodo.Domain/Entities/TodoList.cs" Line="1" Column="1" />
-      <File FileName="TopazTodo.Domain/Entities/TodoItem.cs" Line="8" Column="2" />
+      <File FileName="TopazTodo.WebUI/Controllers/UserController.cs" Line="10" Column="2" />
+      <File FileName="TopazTodo.WebUI/Program.cs" Line="31" Column="6" />
+      <File FileName="TopazTodo.WebUI/Startup.cs" Line="28" Column="14" />
+      <File FileName="TopazTodo.WebUI/appsettings.json" Line="18" Column="1" />
+      <File FileName="TopazTodo.WebUI/Pages/_ViewImports.cshtml" Line="5" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TopazTodo" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="TopazTodo.Application" expanded="True">
-                <Node name="Interfaces" expanded="True" />
-              </Node>
-              <Node name="TopazTodo.Domain" expanded="True">
-                <Node name="Entities" expanded="True" />
-              </Node>
-              <Node name="TopazTodo.Infrastructure" expanded="True">
-                <Node name="Migrations" expanded="True" />
-              </Node>
+              <Node name="TopazTodo.Application" expanded="True" />
+              <Node name="TopazTodo.Domain" expanded="True" />
+              <Node name="TopazTodo.Infrastructure" expanded="True" />
               <Node name="TopazTodo.WebUI" expanded="True">
+                <Node name="ClientApp" expanded="True" />
                 <Node name="Controllers" expanded="True" />
+                <Node name="Pages" expanded="True" />
+                <Node name="TopazTodo.Application" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -47,8 +39,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.src.TopazTodo.WebUI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
 </Properties>

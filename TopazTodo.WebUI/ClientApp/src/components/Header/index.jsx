@@ -56,6 +56,7 @@ export default () => {
             />
           )}
         </Toolbar>
+        <a href='https://localhost:7075'>Login with Google</a>
       </AppBar>
     </Box>
   )

@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using TopazTodo.Infrastructure;
 
 namespace TopazTodo.WebUI;
@@ -17,7 +19,11 @@ public class Startup
     {
         services.AddControllersWithViews();
         services.AddInfrastructure(Configuration);
-        services.AddAuthentication()
+        services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
             .AddGoogle(options =>
             {
                 options.ClientId = Configuration["AppSettings:GoogleClientId"];
@@ -31,6 +37,8 @@ public class Startup
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
+        app.UseAuthentication();
+        app.UseAuthorization();
         app.UseRouting();
         app.UseEndpoints(endpoints =>
         {
