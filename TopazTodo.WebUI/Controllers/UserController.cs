@@ -16,15 +16,6 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    [HttpPost("login")]
-    public ChallengeResult Login()
-    {
-        return new ChallengeResult
-            (GoogleDefaults.AuthenticationScheme,
-                new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse", "GoogleLogin")}
-            );
-    }
-
     [HttpGet("test")]
     public IActionResult Test()
     {
