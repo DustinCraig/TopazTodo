@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Google.Apis.Auth;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace TopazTodo.WebUI.Controllers;
 
@@ -16,13 +19,20 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    [HttpPost("login")]
-    public ChallengeResult Login()
+    public class AuthenticateRequest
     {
-        return new ChallengeResult
-            (GoogleDefaults.AuthenticationScheme,
-                new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse", "GoogleLogin")}
-            );
+        [Required]
+        public string IdToken { get; set; }
+    }
+
+    [AllowAnonymous]
+    [HttpPost("authenticate")]
+    public IActionResult Authenticate([FromBody] AuthenticateRequest data)
+    {
+        GoogleJsonWebSignature.ValidationSettings settings = new GoogleJsonWebSignature.ValidationSettings()
+        {
+            Audience = new List<string>() { }
+        };
     }
 
     [HttpGet("test")]
