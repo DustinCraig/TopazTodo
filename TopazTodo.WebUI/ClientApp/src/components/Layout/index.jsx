@@ -1,16 +1,32 @@
 import React from 'react'
-import { SIDE_MENU_WIDTH } from '../../constants'
-import { useLayout } from '../../context/LayoutContext'
+import { Routes, Route } from 'react-router-dom'
 import Header from '../Header'
 import SideMenu from '../SideMenu'
+import Login from '../../pages/Login'
 
 export default ({ history }) => {
-  const [layoutState, layoutDispatch] = useLayout()
-
   return (
-    <div sx={{ display: 'flex', maxWidth: '100vw', overflowX: 'hidden' }}>
-      <Header />
-      <SideMenu />
+    <div
+      sx={{
+        display: 'flex',
+        maxWidth: '100vw',
+        overflowX: 'hidden',
+        height: '100vh',
+      }}
+    >
+      <Routes>
+        <Route
+          path='/'
+          exact
+          element={
+            <>
+              <Header />
+              <SideMenu />
+            </>
+          }
+        />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </div>
   )
 }
