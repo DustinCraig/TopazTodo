@@ -1,9 +1,7 @@
 ﻿using Google.Apis.Auth;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+using TopazTodo.Application.DTOs;
 
 namespace TopazTodo.WebUI.Controllers;
 
@@ -19,20 +17,25 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    public class AuthenticateRequest
-    {
-        [Required]
-        public string IdToken { get; set; }
-    }
-
     [AllowAnonymous]
     [HttpPost("authenticate")]
-    public IActionResult Authenticate([FromBody] AuthenticateRequest data)
+    public async Task<IActionResult> AuthenticateAsync([FromBody] UserLoginRequest data)
     {
-        GoogleJsonWebSignature.ValidationSettings settings = new GoogleJsonWebSignature.ValidationSettings()
+        try
         {
-            Audience = new List<string>() { }
-        };
+            GoogleJsonWebSignature.ValidationSettings settings = new GoogleJsonWebSignature.ValidationSettings()
+            {
+                
+            };
+
+            GoogleJsonWebSignature.Payload payload = await GoogleJsonWebSignature.ValidateAsync(data.TokenId, settings);
+            Console.WriteLine(payload);
+        } catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        
+        return Ok(new { Success = true });
     }
 
     [HttpGet("test")]

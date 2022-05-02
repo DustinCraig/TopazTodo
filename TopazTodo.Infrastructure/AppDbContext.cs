@@ -1,19 +1,22 @@
 ﻿using TopazTodo.Application.Interfaces;
 using TopazTodo.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using System.Reflection;
+using Duende.IdentityServer.EntityFramework.Options;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Identity;
 
 namespace TopazTodo.Infrastructure;
 
-public class AppDbContext : DbContext, IApplicationDbContext
+public class AppDbContext : ApiAuthorizationDbContext<IdentityUser>, IApplicationDbContext 
 {
 
     public DbSet<TodoItem> TodoItems { get; set; }
     public DbSet<TodoList> TodoLists { get; set; }
 
-    public AppDbContext() { }
 
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    public AppDbContext(DbContextOptions<AppDbContext> options, IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
     {
 
     }

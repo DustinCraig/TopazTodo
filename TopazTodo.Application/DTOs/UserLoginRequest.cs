@@ -1,9 +1,12 @@
 ﻿
-using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
 
 namespace TopazTodo.Application.DTOs;
 
 public class UserLoginRequest
 {
-    public IList<AuthenticationScheme> ExternalLogins { get; set; }
+    [Required]
+    public string TokenId { get; set; }
+    [Required]
+    public string Provider { get; set; }
 }
